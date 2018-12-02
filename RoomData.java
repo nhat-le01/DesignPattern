@@ -2,6 +2,9 @@ import java.util.ArrayList;
 
 public class RoomData implements Subject{
 	private ArrayList<Observer> observers;
+	private int numberOfOccupant;
+	private boolean available;
+	private int numberOfDay;
 	public RoomData() {
 		observers = new ArrayList<Observer>();
 	}
