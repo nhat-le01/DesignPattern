@@ -1,9 +1,7 @@
-public class Deluxe extends Room{
 
-    public Deluxe(){
-        description = "Deluxe Room";
-    }
-    public double cost() {
-        return 75;
-    }
+public class Deluxe extends MotelRoom{
+	Deluxe(){
+		name = "Deluxe Room";
+		rate = 75;
+	}
 }
