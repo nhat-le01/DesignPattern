@@ -4,4 +4,7 @@ public class Regular extends MotelRoom {
 		name = "Regular Room";
 		rate = 50;
 	}
+	public double cost() {
+        return rate;
+    }
 }
