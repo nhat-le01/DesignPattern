@@ -4,4 +4,7 @@ public class Suite extends MotelRoom{
 		name = "Suite Room";
 		rate = 100;
 	}
+	    public double cost() {
+        return rate;
+    }
 }
