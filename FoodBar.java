@@ -1,7 +1,7 @@
 public class FoodBar extends RoomDecorator{
-    Room room;
+    MotelRoom room;
 
-    public FoodBar(Room room){
+    public FoodBar(MotelRoom room){
         this.room = room;
     }
 
