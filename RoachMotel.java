@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class RoachMotel {
 
     private static RoachMotel roachMotel;
@@ -21,6 +23,15 @@ public class RoachMotel {
         MotelRoom del1 = service.setRoom("deluxe");
         MotelRoom del2 = service.setRoom("deluxe");
         MotelRoom sui1 = service.setRoom("suite");
+    }
+
+    public MotelRoom checkIn(RoachColony rc2, String deluxe, ArrayList amenities2) {
+        return null;
+    }
+
+
+    public Double checkOut(MotelRoom r2, int i) {
+        return null;
     }
 }
 
