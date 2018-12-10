@@ -7,7 +7,7 @@ public class RoachMotel implements Subject{
     private static RoachMotel roachMotel;
     Map<MotelRoom, Boolean> roachMotelTracker;
     boolean vacant;
-    ArrayList<String> waitList;
+    ArrayList<RoachColony> waitList;
 
 
     public RoachMotel() {
