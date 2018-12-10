@@ -1,6 +1,6 @@
 
 public interface Subject {
-	public void registerObserver(Observer o);
-	public void removeObserver(Observer o);
+	public void registerObserver(RoachColony o);
+	public void removeObserver(RoachColony o);
 	public void notifyObservers();
 }

@@ -1,53 +1,42 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Map;
 
 
 public class RoachMotel implements Subject{
 
     private static RoachMotel roachMotel;
-    Map<MotelRoom, Boolean> roachMotelTracker;
+    private Map<MotelRoom, Boolean> roachMotelTracker;
     boolean vacant;
-    ArrayList<RoachColony> waitList;
+    private ArrayList<RoachColony> waitList;
 
 
     public RoachMotel() {
-		observers = new ArrayList<Observer>();
+		waitList = new ArrayList<RoachColony>();
+		roachMotelTracker = new HashMap<MotelRoom,Boolean>();
+
 	}
 	
-	public void registerObserver(Observer o) {
-		observers.add(o);
+	public void registerObserver(RoachColony o) {
+		waitList.add(o);
 	}
 	
-	public void removeObserver(Observer o) {
-		int j = observers.indexOf(o);
+	public void removeObserver(RoachColony o) {
+		int j = waitList.indexOf(o);
 		if (j >= 0) {
-			observers.remove(j);
+			waitList.remove(j);
 		}
 	}
-	
-	public void notifyObservers() {
-		for (int j = 0; j < observers.size(); j++) {
-			Observer observer = (Observer) observers.get(j);
-			observer.update();
+
+
+
+    public void notifyObservers() {
+		for (int j = 0; j < waitList.size(); j++) {
+			Observer observer = (Observer) waitList.get(j);
+			observer.update(this);
 		}
 	}
-	
-	public int getNumberOfOccupants() {
-		return numberOfOccupant;
-	}
-	
-	public int getNumberofDaysPassed() {
-		return numberOfDay;
-	}
-	
-	public boolean isAvailable(){
-		return available;
-	}
-	
-	
-	public void measurementsChanged() {
-		notifyObservers();
-	}
+
 
     public static RoachMotel getInstance(){
         if(roachMotel == null) {
@@ -87,6 +76,8 @@ public class RoachMotel implements Subject{
                 return key;
             }
         }
+        waitList.add(rc1);
+        return null;
 
 
 
@@ -94,7 +85,7 @@ public class RoachMotel implements Subject{
 	
 	public double checkOut(MotelRoom room, int days) {
 		roachMotelTracker.put(room,false);
-	for (RoachColony r: wailist) {
+	for (RoachColony r: waitList) {
 		r.update(this);
 	}
 	waitList.clear();
@@ -128,5 +119,8 @@ public class RoachMotel implements Subject{
 	}
 
 
+    public String getName() {
+        return "HNPM Motel";
+    }
 }
 
