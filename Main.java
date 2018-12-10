@@ -39,6 +39,7 @@ public class Main {
         MotelRoom r8 = rm.checkIn(rc8,"Suite",amenities2);
         RoachColony rc9 = new RoachColony("ninth colony",900,0.9);
         cost = rm.checkOut(r3,3);
+        System.out.println(rm);
         System.out.println("cost:" + cost);
         MotelRoom r9 = rm.checkIn(rc9,"Regular",amenities2);
     }

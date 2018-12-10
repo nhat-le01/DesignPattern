@@ -48,13 +48,13 @@ public class RoachMotel implements Subject{
 	public MotelRoom checkIn(RoachColony rc1, String type, ArrayList<String> amenities) {
 
 
+
         for (Map.Entry<String, Boolean> entry : roachMotelTracker.entrySet()) {
             String key = entry.getKey();
             Boolean value = entry.getValue();
             if (!value){
                 MotelRoomFactory factory = new MotelRoomFactory();
                 MotelRoom room = factory.createMotelRoom(type);
-
                 for (String amenity : amenities) {
                     if (amenity.equals("foodbar")) {
                         room = new FoodBar(room);
@@ -72,17 +72,18 @@ public class RoachMotel implements Subject{
                 }
 
                 roachMotelTracker.put(key,true);
+                room.setName(key);
                 System.out.println(roachMotelTracker);
                 return room;
             }
         }
         waitList.add(rc1);
+        System.out.println("=============" + rc1.name + " si waitlisted" + "=================");
         System.out.println(roachMotelTracker);
         return null;
 	}
 	
 	public double checkOut(MotelRoom room, int days) {
-        System.out.println(room.getName());
         roachMotelTracker.put(room.getName(),false);
 	for (RoachColony r: waitList) {
 		r.update(this);
