@@ -1,9 +1,17 @@
 
-public class RoachColony {
+public class RoachColony implements Observer{
 	public String name;
 	public int initialPopulation;
 	public double growthRate;
-	Boolean spray = false;
+	boolean spray = false;
+	private MotelRoom r;
+	public void update(MotelRoom r) {
+		
+		display();
+	}
+	public void display() {
+		System.out.println("The room 
+	}
 	
 	public RoachColony() {
 		name = "Default";
@@ -23,6 +31,7 @@ public class RoachColony {
 	public void setSpray() {
 		spray = true;
 	}
+	
 	
 	public String toString() {
 		return "Name: " + name
