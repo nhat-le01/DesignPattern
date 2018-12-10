@@ -93,8 +93,14 @@ public class RoachMotel implements Subject{
 	}
 	
 	public double checkOut(MotelRoom room, int days) {
-
-        roachMotelTracker.put(room,false);
+		roachMotelTracker.put(room,false);
+	for (RoachColony r: wailist) {
+		r.update(this);
+	}
+	waitList.clear();
+		
+		
+       // roachMotelTracker.put(room,false);
 		
 		return room.cost()*days;
 	}
