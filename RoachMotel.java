@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Map;
 
 
-public class RoachMotel{
+public class RoachMotel implements Subject{
 
     private static RoachMotel roachMotel;
     Map<MotelRoom, Boolean> roachMotelTracker;
@@ -10,7 +10,44 @@ public class RoachMotel{
     ArrayList<String> waitList;
 
 
-    private RoachMotel(){}
+    public RoachMotel() {
+		observers = new ArrayList<Observer>();
+	}
+	
+	public void registerObserver(Observer o) {
+		observers.add(o);
+	}
+	
+	public void removeObserver(Observer o) {
+		int j = observers.indexOf(o);
+		if (j >= 0) {
+			observers.remove(j);
+		}
+	}
+	
+	public void notifyObservers() {
+		for (int j = 0; j < observers.size(); j++) {
+			Observer observer = (Observer) observers.get(j);
+			observer.update();
+		}
+	}
+	
+	public int getNumberOfOccupants() {
+		return numberOfOccupant;
+	}
+	
+	public int getNumberofDaysPassed() {
+		return numberOfDay;
+	}
+	
+	public boolean isAvailable(){
+		return available;
+	}
+	
+	
+	public void measurementsChanged() {
+		notifyObservers();
+	}
 
     public static RoachMotel getInstance(){
         if(roachMotel == null) {
