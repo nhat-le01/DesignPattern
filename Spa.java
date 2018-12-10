@@ -1,5 +1,5 @@
 public class Spa extends RoomDecorator {
-    MotelRoom room;
+	MotelRoom room;
 
     public Spa(MotelRoom room){
         this.room = room;

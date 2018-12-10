@@ -1,10 +1,11 @@
 
 public class Regular extends MotelRoom {
-	Regular(){
+	public Regular(){
 		name = "Regular Room";
 		rate = 50;
 	}
+	
 	public double cost() {
-        return rate;
-    }
+		return rate;
+	}
 }

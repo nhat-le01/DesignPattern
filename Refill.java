@@ -1,5 +1,5 @@
 public class Refill extends RoomDecorator{
-    MotelRoom room;
+	MotelRoom room;
 
     public Refill(MotelRoom room){
         this.room = room;

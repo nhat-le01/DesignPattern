@@ -3,13 +3,13 @@ public class MotelRoomFactory {
 	public MotelRoom createMotelRoom(String type) {
 		MotelRoom room = null;
 		
-		if(type.equals("regular")){
+		if(type.equals("Regular")){
 			room = new Regular();
 		}
-		if(type.equals("deluxe")) {
+		if(type.equals("Deluxe")) {
 			room = new Deluxe();
 		}
-		if(type.equals("suite")) {
+		if(type.equals("Suite")) {
 			room = new Suite();
 		}
 		

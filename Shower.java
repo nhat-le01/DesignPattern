@@ -1,5 +1,5 @@
 public class Shower extends RoomDecorator{
-    MotelRoom room;
+	MotelRoom room;
 
     public Shower(MotelRoom room){
         this.room = room;

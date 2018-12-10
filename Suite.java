@@ -1,10 +1,11 @@
 
 public class Suite extends MotelRoom{
-	Suite(){
+	public Suite(){
 		name = "Suite Room";
 		rate = 100;
 	}
-	    public double cost() {
-        return rate;
-    }
+	
+	public double cost() {
+		return rate;
+	}
 }

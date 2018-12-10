@@ -1,11 +1,11 @@
 
 public class Deluxe extends MotelRoom{
-	Deluxe(){
+	public Deluxe(){
 		name = "Deluxe Room";
 		rate = 75;
 	}
 	
-	    public double cost() {
-        return rate;
-    }
+   public double cost() {
+	   return rate;
+   }
 }

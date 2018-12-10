@@ -11,6 +11,7 @@ public class FoodBar extends RoomDecorator{
 
 
     public double cost() {
+    	//issue: cost()
         return 10 + room.cost();
     }
 }
