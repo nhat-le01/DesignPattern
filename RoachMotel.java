@@ -1,8 +1,14 @@
 import java.util.ArrayList;
+import java.util.Map;
 
-public class RoachMotel {
+
+public class RoachMotel{
 
     private static RoachMotel roachMotel;
+    Map<MotelRoom, Boolean> roachMotelTracker;
+    boolean vacant;
+    ArrayList<String> waitList;
+
 
     private RoachMotel(){}
 
@@ -35,6 +41,8 @@ public class RoachMotel {
 			}
 		}
 
+		System.out.println("");
+
 		return room;
 	}
 	
@@ -54,11 +62,18 @@ public class RoachMotel {
         MotelRoom del1 = service.setRoom("Deluxe");
         MotelRoom del2 = service.setRoom("Deluxe");
         MotelRoom sui1 = service.setRoom("Suite");
+
+        roachMotelTracker.put(reg1, false);
+        roachMotelTracker.put(reg2, false);
+        roachMotelTracker.put(del1, false);
+        roachMotelTracker.put(del2, false);
+        roachMotelTracker.put(sui1, false);
     }
 
     public String toString() {
 		return "Roach Motel";
 	}
+
 
 }
 
