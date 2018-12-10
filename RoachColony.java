@@ -5,13 +5,13 @@ public class RoachColony implements Observer{
 	public double growthRate;
 	boolean spray = false;
 	private MotelRoom r;
-	public void update(MotelRoom r) {
-		
-		display();
+	public void update(RoachMotel rm) {
+		System.out.println("Roach motel " + rm.getName() + " has an available room");
+		//display();
 	}
-	public void display() {
-		System.out.println("The room");
-	}
+	//public void display() {
+		//System.out.println("The room ");
+	//}
 	
 	public RoachColony() {
 		name = "Default";
