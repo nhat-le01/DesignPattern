@@ -27,6 +27,19 @@ public class RoomData implements Subject{
 		}
 	}
 	
+	public int getNumberOfOccupants() {
+		return numberOfOccupant;
+	}
+	
+	public int getNumberofDaysPassed() {
+		return numberOfDay;
+	}
+	
+	public boolean isAvailable(){
+		return available;
+	}
+	
+	
 	public void measurementsChanged() {
 		notifyObservers();
 	}
