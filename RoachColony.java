@@ -10,7 +10,7 @@ public class RoachColony implements Observer{
 		display();
 	}
 	public void display() {
-		System.out.println("The room 
+		System.out.println("The room");
 	}
 	
 	public RoachColony() {

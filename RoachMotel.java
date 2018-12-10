@@ -57,28 +57,28 @@ public class RoachMotel implements Subject{
     }
     
 	public MotelRoom checkIn(RoachColony rc1, String type, ArrayList<String> amenities) {
-		MotelRoomFactory factory = new MotelRoomFactory();
+
+
+    	MotelRoomFactory factory = new MotelRoomFactory();
 		MotelRoom room;
 		
 		room = factory.createMotelRoom(type);
-		
-		for(int i = 0; i < amenities.size(); i++) {
-			if(amenities.get(i) == "foodbar") {
-				room = new FoodBar(room);
-			}
-			if(amenities.get(i) == "spa") {
-				room = new Spa(room);
-			}
-			if(amenities.get(i) == "refillbar") {
-				room = new Refill(room);
-			}
-			if(amenities.get(i) == "shower") {
-				room = new Shower(room);
-				rc1.setSpray();
-			}
-		}
 
-		System.out.println("");
+        for (String amenity : amenities) {
+            if (amenity.equals("foodbar")) {
+                room = new FoodBar(room);
+            }
+            if (amenity.equals("spa")) {
+                room = new Spa(room);
+            }
+            if (amenity.equals("refillbar")) {
+                room = new Refill(room);
+            }
+            if (amenity.equals("shower")) {
+                room = new Shower(room);
+                rc1.setSpray();
+            }
+        }
 
 		return room;
 	}
