@@ -25,7 +25,14 @@ public class RoachColony implements Observer{
 	}
 	
 	public void party() {
-		initialPopulation = (int) (initialPopulation * growthRate);
+		initialPopulation += (int) (initialPopulation * growthRate);
+
+		if (spray)
+		    initialPopulation -= initialPopulation * .25;
+        else
+            initialPopulation -= initialPopulation * .50;
+
+
 	}
 	
 	public void setSpray() {
