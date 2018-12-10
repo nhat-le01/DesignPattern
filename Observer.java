@@ -1,4 +1,4 @@
 
 public interface Observer {
-  public void update(int numberOfOccupant, boolean isAvailable, int daysPassed);
+  public void update(boolean hasAntiSpray, int numberOfOccupant, boolean isAvailable, int daysPassed);
 }
