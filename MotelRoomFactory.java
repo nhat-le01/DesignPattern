@@ -2,6 +2,7 @@
 public class MotelRoomFactory {
 	public MotelRoom createMotelRoom(String type) {
 		MotelRoom room = null;
+
 		
 		if(type.equals("Regular")){
 			room = new Regular();

@@ -10,4 +10,12 @@ public abstract class MotelRoom {
 	}
 
 	public abstract double cost();
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getName(){
+		return name;
+	}
 }
