@@ -78,7 +78,7 @@ public class RoachMotel implements Subject{
             }
         }
         waitList.add(rc1);
-        System.out.println("=============" + rc1.name + " si waitlisted" + "=================");
+        System.out.println("=============" + rc1.name + " is waitlisted" + "=================");
         System.out.println(roachMotelTracker);
         return null;
 	}
