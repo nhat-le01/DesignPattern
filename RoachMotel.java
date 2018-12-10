@@ -58,33 +58,43 @@ public class RoachMotel implements Subject{
     
 	public MotelRoom checkIn(RoachColony rc1, String type, ArrayList<String> amenities) {
 
+        for (Map.Entry<MotelRoom, Boolean> entry : roachMotelTracker.entrySet()) {
+            MotelRoom key = entry.getKey();
+            Boolean value = entry.getValue();
+            if (!value){
+                MotelRoomFactory factory = new MotelRoomFactory();
 
-    	MotelRoomFactory factory = new MotelRoomFactory();
-		MotelRoom room;
-		
-		room = factory.createMotelRoom(type);
 
-        for (String amenity : amenities) {
-            if (amenity.equals("foodbar")) {
-                room = new FoodBar(room);
-            }
-            if (amenity.equals("spa")) {
-                room = new Spa(room);
-            }
-            if (amenity.equals("refillbar")) {
-                room = new Refill(room);
-            }
-            if (amenity.equals("shower")) {
-                room = new Shower(room);
-                rc1.setSpray();
+                key = factory.createMotelRoom(type);
+
+                for (String amenity : amenities) {
+                    if (amenity.equals("foodbar")) {
+                        key = new FoodBar(key);
+                    }
+                    if (amenity.equals("spa")) {
+                        key = new Spa(key);
+                    }
+                    if (amenity.equals("refillbar")) {
+                        key = new Refill(key);
+                    }
+                    if (amenity.equals("shower")) {
+                        key = new Shower(key);
+                        rc1.setSpray();
+                    }
+                }
+
+                roachMotelTracker.put(key,true);
+                return key;
             }
         }
 
-		return room;
+
+
 	}
 	
 	public double checkOut(MotelRoom room, int days) {
 
+        roachMotelTracker.put(room,false);
 		
 		return room.cost()*days;
 	}
