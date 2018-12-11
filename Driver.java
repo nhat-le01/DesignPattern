@@ -111,5 +111,25 @@ public class Driver {
         cost = rm.checkOut(r2,5);
         System.out.println("Cost for room " + r2.name + " is: " + currencyFormatter.format(cost) + "\n");
         System.out.println(rm);
+
+        System.out.println("Room " + r6.getName() + " is being checked out of.\n");
+        cost = rm.checkOut(r6,2);
+        System.out.println("Cost for room " + r6.name + " is: " + currencyFormatter.format(cost) + "\n");
+        System.out.println(rm);
+
+        System.out.println("Room " + r4.getName() + " is being checked out of.\n");
+        cost = rm.checkOut(r4,1);
+        System.out.println("Cost for room " + r4.name + " is: " + currencyFormatter.format(cost) + "\n");
+        System.out.println(rm);
+
+        System.out.println("Room " + r5.getName() + " is being checked out of.\n");
+        cost = rm.checkOut(r5,14);
+        System.out.println("Cost for room " + r5.name + " is: " + currencyFormatter.format(cost) + "\n");
+        System.out.println(rm);
+
+        System.out.println("Room " + r3.getName() + " is being checked out of.\n");
+        cost = rm.checkOut(r3,7);
+        System.out.println("Cost for room " + r3.name + " is: " + currencyFormatter.format(cost) + "\n");
+        System.out.println(rm);
     }
 }
