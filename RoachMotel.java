@@ -20,6 +20,8 @@ public class RoachMotel implements Subject{
     boolean vacant;
     private ArrayList<RoachColony> waitList;
     String motelName = "HassNhaPeteMat Motel";
+    int availableRooms;
+    
 
     /**
      * Default Constructor
@@ -98,6 +100,7 @@ public class RoachMotel implements Subject{
 
                 roachMotelTracker.put(key,true);
                 room.setName(key);
+                availableRooms -= 1;
                 System.out.println(rc1.name + " is checking into room " + key + " " + room.getDescription() + "\n");
                 return room;
             }
@@ -116,6 +119,7 @@ public class RoachMotel implements Subject{
 	 */
 	public double checkOut(MotelRoom room, int days) {
         roachMotelTracker.put(room.getName(),false);
+        availableRooms += 1;
 	for (RoachColony r: waitList) {
 		r.update(this);
 	}
@@ -147,6 +151,7 @@ public class RoachMotel implements Subject{
         roachMotelTracker.put(del1.getName(), false);
         roachMotelTracker.put(del2.getName(), false);
         roachMotelTracker.put(sui1.getName(), false);
+        availableRooms = roachMotelTracker.size();
     }
 
     /**
@@ -160,7 +165,11 @@ public class RoachMotel implements Subject{
                 names.add(r);
             }
         }
-        return "Roach Motel Available Rooms: " + names + "\n";
+		if (availableRooms == 0) {
+			vacant = false;
+			return "Roach Motel Available Rooms: " + names + "\n" + "NoVacancy is on \n";
+		}
+        return "Roach Motel Available Rooms: " + names + "\n" + "Vacancy is on\n";
 	}
 
     /**
