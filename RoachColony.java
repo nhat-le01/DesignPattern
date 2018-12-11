@@ -19,8 +19,8 @@ public class RoachColony implements Observer{
 	 * Definition for update in Observer pattern Observer.java
 	 * @return String to notify RoachColony of available rooms
 	 */
-	public String update(RoachMotel rm) {
-		return name + " has been notified that Roach Motel " + rm.getName() + " has an available room!\n";
+	public void update(RoachMotel rm) {
+		System.out.println(name + " has been notified that Roach Motel " + rm.getName() + " has an available room!");
 	}
 	
 	/**

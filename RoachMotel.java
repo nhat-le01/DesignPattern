@@ -13,7 +13,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-
 public class RoachMotel implements Subject{
 
     private static RoachMotel roachMotel;

@@ -13,5 +13,5 @@ public interface Observer {
 	 * Updates status of RoachMotel Vacancy
 	 * @param rm The RoachMotel that is currently being used
 	 */
-  public String update(RoachMotel rm);
+  public void update(RoachMotel rm);
 }
