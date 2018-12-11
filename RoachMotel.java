@@ -156,7 +156,7 @@ public class RoachMotel implements Subject{
 
     /**
      * toString of RoachMotel
-     * @return String of available rooms in the RoachMotel
+     * @return String of available rooms in the RoachMotel and if there is vacancy as a fake sign
      */
     public String toString() {
         ArrayList<String> names = new ArrayList<String>();
