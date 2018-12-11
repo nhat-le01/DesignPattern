@@ -1,3 +1,14 @@
+/**
+ * @author Mateo Olmeda
+ * @author Peter Park
+ * @author Hassan Ishmam
+ * @author Nhat Le
+ * December 12, 2018
+ * Purpose: RoachMotel Singleton Design Pattern. Maintains rooms and room availability
+ * Inputs:	Values needed for Observer pattern and check in and check out
+ * Outputs: Status of rooms, cost of room
+ */
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -9,18 +20,26 @@ public class RoachMotel implements Subject{
     private Map<String, Boolean> roachMotelTracker;
     boolean vacant;
     private ArrayList<RoachColony> waitList;
+    String motelName = "HassNhaPeteMat Motel";
 
-
+    /**
+     * Default Constructor
+     */
     public RoachMotel() {
 		waitList = new ArrayList<RoachColony>();
 		roachMotelTracker = new HashMap<String, Boolean>();
-
 	}
 	
+    /**
+     * Wait list for RoachMotel rooms. Updates waitList ArrayList
+     */
 	public void registerObserver(RoachColony o) {
 		waitList.add(o);
 	}
 	
+	/**
+	 * Remove RoachColony for waitList ArrayList
+	 */
 	public void removeObserver(RoachColony o) {
 		int j = waitList.indexOf(o);
 		if (j >= 0) {
@@ -28,12 +47,19 @@ public class RoachMotel implements Subject{
 		}
 	}
 
+	/**
+	 * Notify RoachColony of room availability
+	 */
     public void notifyObservers() {
         for (RoachColony aWaitList : waitList) {
             ((Observer) aWaitList).update(this);
         }
 	}
 
+    /**
+     * RoachMotel instance Singleton
+     * @return RoachMotel instance
+     */
     public static RoachMotel getInstance(){
         if(roachMotel == null) {
             roachMotel = new RoachMotel();
@@ -41,10 +67,14 @@ public class RoachMotel implements Subject{
         return roachMotel;
     }
     
+    /**
+     * Check into a RoachMotel room  
+     * @param rc1 RoachColony that will occupy the room
+     * @param type String of the name of the type of room to create
+     * @param amenities ArrayList of all the amenities that will be added to the room
+     * @return returns completed room after going factory and decorator design pattern
+     */
 	public MotelRoom checkIn(RoachColony rc1, String type, ArrayList<String> amenities) {
-
-
-
         for (Map.Entry<String, Boolean> entry : roachMotelTracker.entrySet()) {
             String key = entry.getKey();
             Boolean value = entry.getValue();
@@ -79,8 +109,13 @@ public class RoachMotel implements Subject{
         return null;
 	}
 	
+	/**
+	 * calculate the cost and make used room available
+	 * @param room MotelRoom that will be available and have cost calculated
+	 * @param days Number of days the room was occupied.  Used in cost calculation
+	 * @return Total cost of the room
+	 */
 	public double checkOut(MotelRoom room, int days) {
-        System.out.println("Room " + room.getName() + " is being checked out of.\n");
         roachMotelTracker.put(room.getName(),false);
 	for (RoachColony r: waitList) {
 		r.update(this);
@@ -89,6 +124,9 @@ public class RoachMotel implements Subject{
 	return room.cost()*days;
 	}
 	
+	/**
+	 * Method creates a preset amount of rooms for the RoachMotel
+	 */
     public void createRooms() {
         //Generate 5 rooms
         MotelRoomFactory factory = new MotelRoomFactory();
@@ -110,10 +148,12 @@ public class RoachMotel implements Subject{
         roachMotelTracker.put(del1.getName(), false);
         roachMotelTracker.put(del2.getName(), false);
         roachMotelTracker.put(sui1.getName(), false);
-
-
     }
 
+    /**
+     * toString of RoachMotel
+     * @return String of available rooms in the RoachMotel
+     */
     public String toString() {
         ArrayList<String> names = new ArrayList<String>();
 		for (String r : roachMotelTracker.keySet()) {
@@ -124,8 +164,12 @@ public class RoachMotel implements Subject{
         return "Roach Motel Available Rooms: " + names + "\n";
 	}
 
+    /**
+     * name getter
+     * @return 
+     */
     public String getName() {
-        return "HassNhaPeteMat Motel";
+        return motelName;
     }
 }
 

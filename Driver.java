@@ -1,3 +1,14 @@
+/**
+ * @author Mateo Olmeda
+ * @author Peter Park
+ * @author Hassan Ishmam
+ * @author Nhat Le
+ * December 12, 2018
+ * Purpose: Driver that tests Project Patterns
+ * Inputs:	None
+ * Outputs: Prints toString of classes in Project Patterns to test functionality
+ */
+
 import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Locale;
@@ -27,7 +38,6 @@ public class Driver {
         amenities4.add("spa");
         amenities4.add("refillbar");
 
-
         ArrayList amenities5 = new ArrayList();
         amenities5.add("foodbar");
         amenities5.add("spa");
@@ -39,8 +49,9 @@ public class Driver {
         MotelRoom r1 = rm.checkIn(rc1,"Regular",amenities5);
         System.out.println(rc1);
         System.out.println(rm);
-        rc1.party();
+        System.out.println(rc1.party());
         System.out.println(rc1);
+        System.out.println("Room " + r1.getName() + " is being checked out of.\n");
         cost = rm.checkOut(r1,5);
         System.out.println("Cost for room " + r1.name + " is: " + currencyFormatter.format(cost) + "\n");
         System.out.println(rm);
@@ -59,11 +70,11 @@ public class Driver {
         MotelRoom r4 = rm.checkIn(rc4,"Suite",amenities3);
         System.out.println(rc4);
         System.out.println(rm);
-        rc4.party();
+        System.out.println(rc4.party());
         System.out.println(rc4);
-        rc4.party();
+        System.out.println(rc4.party());
         System.out.println(rc4);
-        rc4.party();
+        System.out.println(rc4.party());
         System.out.println(rc4);
 
         RoachColony rc5 = new  RoachColony("Nhat's Colony",1,.5);
@@ -96,10 +107,9 @@ public class Driver {
         System.out.println(rc10);
         System.out.println(rm);
 
+        System.out.println("Room " + r2.getName() + " is being checked out of.\n");
         cost = rm.checkOut(r2,5);
         System.out.println("Cost for room " + r2.name + " is: " + currencyFormatter.format(cost) + "\n");
         System.out.println(rm);
-
-
     }
 }
