@@ -28,15 +28,11 @@ public class RoachMotel implements Subject{
 		}
 	}
 
-
-
     public void notifyObservers() {
-		for (int j = 0; j < waitList.size(); j++) {
-			Observer observer = (Observer) waitList.get(j);
-			observer.update(this);
-		}
+        for (RoachColony aWaitList : waitList) {
+            ((Observer) aWaitList).update(this);
+        }
 	}
-
 
     public static RoachMotel getInstance(){
         if(roachMotel == null) {
@@ -126,7 +122,6 @@ public class RoachMotel implements Subject{
         }
         return "Roach Motel: " + names;
 	}
-
 
     public String getName() {
         return "HNPM Motel";
