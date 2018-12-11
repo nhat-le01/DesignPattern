@@ -6,12 +6,8 @@ public class RoachColony implements Observer{
 	boolean spray = false;
 	private MotelRoom r;
 	public void update(RoachMotel rm) {
-		System.out.println("Roach motel " + rm.getName() + " has an available room");
-		//display();
-	}
-	//public void display() {
-		//System.out.println("The room ");
-	//}
+		System.out.println(name + " has been notified that Roach Motel " + rm.getName() + " has an available room!\n");
+			}
 	
 	public RoachColony() {
 		name = "Default";
@@ -25,12 +21,19 @@ public class RoachColony implements Observer{
 	}
 	
 	public void party() {
+		System.out.println(name + " is throwing a party!");
 		initialPopulation += (int) (initialPopulation * growthRate);
 
-		if (spray)
+		if (spray){
+			System.out.println(name + " didn't cheap out and got a spray resistant shower, the losses were few!");
 		    initialPopulation -= initialPopulation * .25;
-        else
-            initialPopulation -= initialPopulation * .50;
+		}
+        else {
+			System.out.println(name + "  cheaped out and did not get a spray resistant shower, poor roaches!");
+			initialPopulation -= initialPopulation * .50;
+		}
+
+		System.out.println();
 
 
 	}
@@ -44,6 +47,6 @@ public class RoachColony implements Observer{
 		return "Name: " + name
 				+ "\nPopulation: " + initialPopulation
 				+ "\nGrowth Rate: " + growthRate
-				+ "\nSpray Status: " + spray;
+				+ "\nSpray Status: " + spray + "\n";
 	}
 }

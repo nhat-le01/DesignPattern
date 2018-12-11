@@ -69,17 +69,18 @@ public class RoachMotel implements Subject{
 
                 roachMotelTracker.put(key,true);
                 room.setName(key);
-                System.out.println(roachMotelTracker);
+                System.out.println(rc1.name + " is checking into room " + key + " " + room.getDescription() + "\n");
                 return room;
             }
         }
         waitList.add(rc1);
         System.out.println("=============" + rc1.name + " is waitlisted" + "=================");
-        System.out.println(roachMotelTracker);
+
         return null;
 	}
 	
 	public double checkOut(MotelRoom room, int days) {
+        System.out.println("Room " + room.getName() + " is being checked out of.");
         roachMotelTracker.put(room.getName(),false);
 	for (RoachColony r: waitList) {
 		r.update(this);
@@ -120,7 +121,7 @@ public class RoachMotel implements Subject{
                 names.add(r);
             }
         }
-        return "Roach Motel: " + names;
+        return "Roach Motel Available Rooms: " + names + "\n";
 	}
 
     public String getName() {
