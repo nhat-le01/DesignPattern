@@ -80,7 +80,7 @@ public class RoachMotel implements Subject{
 	}
 	
 	public double checkOut(MotelRoom room, int days) {
-        System.out.println("Room " + room.getName() + " is being checked out of.");
+        System.out.println("Room " + room.getName() + " is being checked out of.\n");
         roachMotelTracker.put(room.getName(),false);
 	for (RoachColony r: waitList) {
 		r.update(this);
@@ -125,7 +125,7 @@ public class RoachMotel implements Subject{
 	}
 
     public String getName() {
-        return "HNPM Motel";
+        return "HassNhaPeteMat Motel";
     }
 }
 

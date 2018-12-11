@@ -36,7 +36,7 @@ public class Driver {
         //=======================================================================================
 
         RoachColony rc1 = new  RoachColony("First Colony",100,200);
-        MotelRoom r1 = rm.checkIn(rc1,"Suite",amenities5);
+        MotelRoom r1 = rm.checkIn(rc1,"Regular",amenities5);
         System.out.println(rc1);
         System.out.println(rm);
         rc1.party();
@@ -45,30 +45,61 @@ public class Driver {
         System.out.println("Cost for room " + r1.name + " is: " + currencyFormatter.format(cost) + "\n");
         System.out.println(rm);
 
-       /* RoachColony rc2 = new RoachColony("Second colony",1000,0.2);
-        MotelRoom r2 = rm.checkIn(rc2,"Deluxe",amenities2);
+        RoachColony rc2 = new  RoachColony("Mateo's Colony",200,.1);
+        MotelRoom r2 = rm.checkIn(rc2,"Suite",amenities4);
         System.out.println(rc2);
         System.out.println(rm);
-        rc2.party();
-        System.out.println(rc2);
-        cost = rm.checkOut(r2,3);
-        System.out.println("cost: " + currencyFormatter.format(cost));
+
+        RoachColony rc3 = new  RoachColony("Peter's Colony",50,.3);
+        MotelRoom r3 = rm.checkIn(rc3,"Deluxe",amenities2);
+        System.out.println(rc3);
         System.out.println(rm);
-        RoachColony rc3 = new RoachColony("third colony",300,0.3);
-        MotelRoom r3 = rm.checkIn(rc3,"Regular",amenities3);
-        RoachColony rc4 = new RoachColony("fourth colony",400,0.4);
-        MotelRoom r4 = rm.checkIn(rc4,"Regular",amenities4);
-        RoachColony rc5 = new RoachColony("fifth colony",500,0.5);
-        MotelRoom r5 = rm.checkIn(rc5,"Deluxe",amenities5);
-        RoachColony rc6 = new RoachColony("sixth colony",600,0.6);
-        MotelRoom r6 = rm.checkIn(rc6,"Deluxe",amenities2);
-        RoachColony rc7 = new RoachColony("Seventh colony",700,0.7);
-        MotelRoom r7 = rm.checkIn(rc7,"Suite",amenities);
-        RoachColony rc8 = new RoachColony("eigth colony",800,0.8);
-        MotelRoom r8 = rm.checkIn(rc8,"Suite",amenities4);
-        RoachColony rc9 = new RoachColony("ninth colony",900,0.9);
-        cost = rm.checkOut(r3,3);
-        System.out.println("Cost: " + currencyFormatter.format(cost));
-        MotelRoom r9 = rm.checkIn(rc9,"Regular",amenities3);*/
+
+        RoachColony rc4 = new  RoachColony("Hassan's Colony",1000,.6);
+        MotelRoom r4 = rm.checkIn(rc4,"Suite",amenities3);
+        System.out.println(rc4);
+        System.out.println(rm);
+        rc4.party();
+        System.out.println(rc4);
+        rc4.party();
+        System.out.println(rc4);
+        rc4.party();
+        System.out.println(rc4);
+
+        RoachColony rc5 = new  RoachColony("Nhat's Colony",1,.5);
+        MotelRoom r5 = rm.checkIn(rc5,"Regular",amenities4);
+        System.out.println(rc5);
+        System.out.println(rm);
+
+        RoachColony rc6 = new  RoachColony("David's Colony",300,.55);
+        MotelRoom r6 = rm.checkIn(rc6,"Regular",amenities3);
+        System.out.println(rc6);
+        System.out.println(rm);
+
+        RoachColony rc7 = new  RoachColony("Natali's Colony",1000,.52);
+        MotelRoom r7 = rm.checkIn(rc7,"Regular",amenities2);
+        System.out.println(rc7);
+        System.out.println(rm);
+
+        RoachColony rc8 = new  RoachColony("Cesar's Colony",2000,10);
+        MotelRoom r8 = rm.checkIn(rc8,"Regular",amenities5);
+        System.out.println(rc8);
+        System.out.println(rm);
+
+        RoachColony rc9 = new  RoachColony("Latif's Colony",200,25);
+        MotelRoom r9 = rm.checkIn(rc9,"Regular",amenities3);
+        System.out.println(rc9);
+        System.out.println(rm);
+
+        RoachColony rc10 = new  RoachColony("Jesse's Colony",200,100);
+        MotelRoom r10 = rm.checkIn(rc10,"Regular",amenities4);
+        System.out.println(rc10);
+        System.out.println(rm);
+
+        cost = rm.checkOut(r2,5);
+        System.out.println("Cost for room " + r2.name + " is: " + currencyFormatter.format(cost) + "\n");
+        System.out.println(rm);
+
+
     }
 }
