@@ -1,0 +1,176 @@
+Roach Motel Available Rooms: [101, 102, 103, 104, 105]
+Vacancy is on
+
+First Colony is checking into room 101 Regular Room, FoodBar, Spa, AutoRefill of the FoodBar, Spray Resistant Shower
+
+Name: First Colony
+Population: 100
+Growth Rate: 200.0
+Spray Status: true
+
+Roach Motel Available Rooms: [102, 103, 104, 105]
+Vacancy is on
+
+First Colony is throwing a party!
+First Colony didn't cheap out and got a spray resistant shower, the losses were few!
+
+Name: First Colony
+Population: 15075
+Growth Rate: 200.0
+Spray Status: true
+
+Room 101 is being checked out of.
+
+Cost for room 101 is: $550.00
+
+Roach Motel Available Rooms: [101, 102, 103, 104, 105]
+Vacancy is on
+
+Mateo's Colony is checking into room 101 Suite Room, FoodBar, Spa, AutoRefill of the FoodBar
+
+Name: Mateo's Colony
+Population: 200
+Growth Rate: 0.1
+Spray Status: false
+
+Roach Motel Available Rooms: [102, 103, 104, 105]
+Vacancy is on
+
+Peter's Colony is checking into room 102 Deluxe Room, FoodBar
+
+Name: Peter's Colony
+Population: 50
+Growth Rate: 0.3
+Spray Status: false
+
+Roach Motel Available Rooms: [103, 104, 105]
+Vacancy is on
+
+Hassan's Colony is checking into room 103 Suite Room, FoodBar, Spa
+
+Name: Hassan's Colony
+Population: 1000
+Growth Rate: 0.6
+Spray Status: false
+
+Roach Motel Available Rooms: [104, 105]
+Vacancy is on
+
+Hassan's Colony is throwing a party!
+Hassan's Colony  cheaped out and did not get a spray resistant shower, poor roaches!
+
+Name: Hassan's Colony
+Population: 800
+Growth Rate: 0.6
+Spray Status: false
+
+Hassan's Colony is throwing a party!
+Hassan's Colony  cheaped out and did not get a spray resistant shower, poor roaches!
+
+Name: Hassan's Colony
+Population: 640
+Growth Rate: 0.6
+Spray Status: false
+
+Hassan's Colony is throwing a party!
+Hassan's Colony  cheaped out and did not get a spray resistant shower, poor roaches!
+
+Name: Hassan's Colony
+Population: 512
+Growth Rate: 0.6
+Spray Status: false
+
+Nhat's Colony is checking into room 104 Regular Room, FoodBar, Spa, AutoRefill of the FoodBar
+
+Name: Nhat's Colony
+Population: 1
+Growth Rate: 0.5
+Spray Status: false
+
+Roach Motel Available Rooms: [105]
+Vacancy is on
+
+David's Colony is checking into room 105 Regular Room, FoodBar, Spa
+
+Name: David's Colony
+Population: 300
+Growth Rate: 0.55
+Spray Status: false
+
+Roach Motel Available Rooms: []
+NoVacancy is on 
+
+=============Natali's Colony is waitlisted=================
+Name: Natali's Colony
+Population: 1000
+Growth Rate: 0.52
+Spray Status: false
+
+Roach Motel Available Rooms: []
+NoVacancy is on 
+
+=============Cesar's Colony is waitlisted=================
+Name: Cesar's Colony
+Population: 2000
+Growth Rate: 10.0
+Spray Status: false
+
+Roach Motel Available Rooms: []
+NoVacancy is on 
+
+=============Latif's Colony is waitlisted=================
+Name: Latif's Colony
+Population: 200
+Growth Rate: 25.0
+Spray Status: false
+
+Roach Motel Available Rooms: []
+NoVacancy is on 
+
+=============Jesse's Colony is waitlisted=================
+Name: Jesse's Colony
+Population: 200
+Growth Rate: 100.0
+Spray Status: false
+
+Roach Motel Available Rooms: []
+NoVacancy is on 
+
+Room 101 is being checked out of.
+
+Natali's Colony has been notified that Roach Motel HassNhaPeteMat Motel has an available room!
+Cesar's Colony has been notified that Roach Motel HassNhaPeteMat Motel has an available room!
+Latif's Colony has been notified that Roach Motel HassNhaPeteMat Motel has an available room!
+Jesse's Colony has been notified that Roach Motel HassNhaPeteMat Motel has an available room!
+Cost for room 101 is: $675.00
+
+Roach Motel Available Rooms: [101]
+Vacancy is on
+
+Room 105 is being checked out of.
+
+Cost for room 105 is: $160.00
+
+Roach Motel Available Rooms: [101, 105]
+Vacancy is on
+
+Room 103 is being checked out of.
+
+Cost for room 103 is: $130.00
+
+Roach Motel Available Rooms: [101, 103, 105]
+Vacancy is on
+
+Room 104 is being checked out of.
+
+Cost for room 104 is: $1,190.00
+
+Roach Motel Available Rooms: [101, 103, 104, 105]
+Vacancy is on
+
+Room 102 is being checked out of.
+
+Cost for room 102 is: $595.00
+
+Roach Motel Available Rooms: [101, 102, 103, 104, 105]
+Vacancy is on
